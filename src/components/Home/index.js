@@ -14,6 +14,7 @@ const Home = () => {
                 <Link to='/calculator'>
                     <button id='start-button'>Start</button>
                 </Link>
+                <h3>- Jared Ruiz</h3>
             </div>
         </div>
     )

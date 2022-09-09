@@ -24,6 +24,14 @@
   padding: 10px;
 }
 
+/* Name Tag (Not sure I will keep this yet.*/
+.greeting h3 {
+  font-size: 25px;
+  display: flex;
+  padding: 20px;
+  margin-top: 17%;
+}
+
 #underline-intro {
   text-decoration: underline;
 }
