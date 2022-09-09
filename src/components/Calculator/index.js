@@ -12,7 +12,7 @@ const Calculator = () => {
 
     //test for using innerText to grab the number values for calculator
     const testStateChange = (e) => {
-        if (e.target.innerText === 'Clear') {
+        if (e.target.innerText === 'Cl') {
             setStateChange('0')
         }
         else {
@@ -24,9 +24,23 @@ const Calculator = () => {
         <div className="calculator-styling">
             <h1>Calculator</h1>
             <h2 id="output">{stateChange}</h2>
-            <button onClick={testStateChange} id='test-button'>Test</button>
-            <button onClick={testStateChange} id='test-button'>Test2</button>
-            <button onClick={testStateChange} id='test-button'>Clear</button>
+            <div className="calculator-digits">
+                <button onClick={testStateChange} id='test-button'>1</button>
+                <button onClick={testStateChange} id='test-button'>2</button>
+                <button onClick={testStateChange} id='test-button'>3</button>
+                <button onClick={testStateChange} id='test-button'>4</button>
+                <button onClick={testStateChange} id='test-button'>5</button>
+                <button onClick={testStateChange} id='test-button'>6</button>
+                <button onClick={testStateChange} id='test-button'>7</button>
+                <button onClick={testStateChange} id='test-button'>8</button>
+                <button onClick={testStateChange} id='test-button'>9</button>
+                <button onClick={testStateChange} id='test-button'>+</button>
+                <button onClick={testStateChange} id='test-button'>-</button>
+                <button onClick={testStateChange} id='test-button'>/</button>
+                <button onClick={testStateChange} id='test-button'>*</button>
+                <button onClick={testStateChange} id='test-button'>Cl</button>
+            </div>
+
         </div>
     )
 }
