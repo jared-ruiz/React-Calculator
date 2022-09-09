@@ -1,0 +1,29 @@
+/* simple reset of base css stylings  */
+* {
+  margin: 0;
+  padding: 0;
+  background-color: lightgray;
+}
+
+.home-styling {
+  margin-top: 15%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.greeting {
+  text-align: center;
+}
+
+#start-button {
+  margin-top: 20px;
+  border-width: 2px;
+  border-color: black;
+  border-radius: 5%;
+  padding: 10px 40px;
+}
+
+#start-button:hover {
+  background-color: lightskyblue;
+  cursor: pointer;
+}
