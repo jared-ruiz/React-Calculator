@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+
 /* simple reset of base css stylings  */
 * {
   margin: 0;
   padding: 0;
   background-color: lightgray;
+  font-family: 'Roboto', sans-serif;
+  font-size: 45px;
 }
 
 .home-styling {
@@ -15,12 +19,17 @@
   text-align: center;
 }
 
+.greeting h2 {
+  padding: 10px;
+}
+
 #start-button {
   margin-top: 20px;
   border-width: 2px;
   border-color: black;
   border-radius: 5%;
   padding: 10px 40px;
+  font-weight: bold;
 }
 
 #start-button:hover {

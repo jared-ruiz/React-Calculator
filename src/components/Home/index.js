@@ -11,7 +11,7 @@ const Home = () => {
                 <h1>Welcome to My Custom Calculator</h1>
                 <h2>Click Below To Begin!</h2>
                 <Link to='/calculator'>
-                    <button id='start-button'>Starft</button>
+                    <button id='start-button'>Start</button>
                 </Link>
                 
             </div>
