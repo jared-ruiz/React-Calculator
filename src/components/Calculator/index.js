@@ -7,17 +7,40 @@ import { useState } from "react";
 
 const Calculator = () => {
 
-    //test stateChange
-    const [stateChange, setStateChange] = useState('0');
+    //starting state is an empty string
+    const [stateChange, setStateChange] = useState('');
+    const [operatorChange, setOperatorChange] = useState('')
+    const [firstNumber, setFirstNumber] = useState(0);
+    const [secondNumber, setSecondNumber] = useState(0);
 
     //test for using innerText to grab the number values for calculator
+    //adding the values to current state seems to get what I want
+    //im not sure if itll play out how I want though going forward but this is just
+    //brainstorming atm
+
     const testStateChange = (e) => {
         if (e.target.innerText === 'Cl') {
-            setStateChange('0')
+            setStateChange('')
         }
         else {
-            setStateChange(e.target.innerText);
+            setStateChange(stateChange + e.target.innerText);
         }
+    }
+
+    const handleOperators = (e) => {
+        if (e.target.innerText === '+' || '-' || '*' || '/') {
+            setOperatorChange(e.target.innerText);
+            setFirstNumber(stateChange);
+            setStateChange('');
+        }
+    }
+
+    //assign result to current state
+    const getResult = () => {
+        setStateChange(stateChange);
+        console.log(stateChange);
+        console.log(operatorChange);
+        console.log(firstNumber);
     }
 
     return(
@@ -34,10 +57,11 @@ const Calculator = () => {
                 <button onClick={testStateChange} id='test-button'>7</button>
                 <button onClick={testStateChange} id='test-button'>8</button>
                 <button onClick={testStateChange} id='test-button'>9</button>
-                <button onClick={testStateChange} id='test-button'>+</button>
-                <button onClick={testStateChange} id='test-button'>-</button>
-                <button onClick={testStateChange} id='test-button'>/</button>
-                <button onClick={testStateChange} id='test-button'>*</button>
+                <button onClick={handleOperators} id='test-button'>+</button>
+                <button onClick={handleOperators} id='test-button'>-</button>
+                <button onClick={handleOperators} id='test-button'>/</button>
+                <button onClick={handleOperators} id='test-button'>*</button>
+                <button onClick={getResult} id='test-button'>=</button>
                 <button onClick={testStateChange} id='test-button'>Cl</button>
             </div>
 
