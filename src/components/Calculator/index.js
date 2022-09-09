@@ -20,13 +20,18 @@ const Calculator = () => {
 
     const testStateChange = (e) => {
         if (e.target.innerText === 'Cl') {
-            setStateChange('')
+            setStateChange('');
+            setFirstNumber(0);
+            setSecondNumber(0);
+            setOperatorChange('');
         }
         else {
             setStateChange(stateChange + e.target.innerText);
         }
     }
 
+    //Currently I want to clear the state whenever an operator is clicked so I can assign 
+    //the next button presses to number 2
     const handleOperators = (e) => {
         if (e.target.innerText === '+' || '-' || '*' || '/') {
             setOperatorChange(e.target.innerText);
@@ -36,11 +41,14 @@ const Calculator = () => {
     }
 
     //assign result to current state
+    //ill see if I can assign state to number 2, do the math THEN update state again all in
+    //one go
     const getResult = () => {
         setStateChange(stateChange);
         console.log(stateChange);
         console.log(operatorChange);
         console.log(firstNumber);
+        console.log(secondNumber);
     }
 
     return(
@@ -64,7 +72,6 @@ const Calculator = () => {
                 <button onClick={getResult} id='test-button'>=</button>
                 <button onClick={testStateChange} id='test-button'>Cl</button>
             </div>
-
         </div>
     )
 }
