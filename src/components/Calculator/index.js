@@ -9,7 +9,7 @@ const Calculator = () => {
     const [firstNumber, setFirstNumber] = useState('');
 
     //reset state values
-    const handleClear = (e) => {
+    const handleClear = () => {
         setStateChange('0');
         setFirstNumber('');
         setOperatorChange('');
