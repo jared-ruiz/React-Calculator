@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# React Calculator
+## GoSchoolBox Submission
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- This is a minimalistic approach to a functioning React Calculator. It contians 3 components, Contact, Home, and Calculator while also utilizing creative and personalized custom CSS styling for user enjoyment. 
 
-## Available Scripts
+## Table of Contents
+---
+- [Installation](#installation)
+- [Usage](#usage)
+- [License Information](#license-information)
+- [Questions](#questions)
 
-In the project directory, you can run:
+## Installation
+---
+- Pull repo from github, run "npm i" to install the required dependencies, run "npm run start". Your browser should automatically start up the application with the running code. 
 
-### `npm start`
+## Usage
+---
+- The calculator is set up to handle almost every basic operation including: (addition, subtraction, multiplication, division, decimal, square root, exponential). To ensure smooth usage, make sure to "clear" when starting a brand new calculation. It currently has the ability to take your end result and continue casting operations on it but at the moment, It <u>cannot</u> handle negative number mathematics. If you generate a negative number, you are encouraged to clear and start again. I plan to add the functionality in future developments!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## License Information
+---
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+<br/>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Questions
+---
+- If you have any further questions, contact me here: [GitHub](https://github.com/jared-ruiz), [LinkedIn](https://www.linkedin.com/in/jaredruiz/), [Website](https://jared-ruiz.github.io/Portfolio-Website/)
 
-### `npm test`
+## Reflection
+---
+- This project was challenging and incredibly fun to figure out. As a recent bootcamp graduate, it posed as a very solid learning experience and as an eye opener to certain aspects of JavaScript and React that I needed to brush up on. I have more ideas of how to create this application if I were to start over as well as where I need to improve on. Just knowing how much I was able to learn and implement in such a small amount of time genuinely excites me for the years to come as I continue to develop and tread new grounds as a developer. I apprecaite this opportunity and look forward to more thrilling challenges to come!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-J
