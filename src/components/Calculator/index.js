@@ -134,6 +134,8 @@ const Calculator = () => {
                 <button onClick={getResult} className='button-styling' value='=' id="equal-button">=</button>
                 <button onClick={handleClear} className='button-styling' id="clear-button">Clr</button>
             </div>
+            
+            {/* button for home routing */}
             <div className="return-button">
                 <Link to='/'>
                     <button id="return-button-styling">Back</button>

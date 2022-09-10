@@ -117,7 +117,8 @@
 }
 
 .calculator-digits {
-  margin-left: 42%;
+  margin: auto;
+  justify-content: center;
   margin-top: 1%;
   display: grid;
   grid-template-columns: 100px 100px 100px;
