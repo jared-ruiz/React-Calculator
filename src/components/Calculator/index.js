@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 
 const Calculator = () => {
 
@@ -32,7 +33,7 @@ const Calculator = () => {
     }
 
     const handleOperators = (e) => {
-        if (e.target.value === '+' || '-' || '*' || '/' || 'sqr') {
+        if (e.target.value === '+' || '-' || '*' || '/' || 'sqr' || '^') {
 
             //assign operator state
             setOperatorChange(e.target.value);
@@ -91,6 +92,13 @@ const Calculator = () => {
             //set state to result
             setStateChange(result);
         }
+        //calculate exponential operator
+        else if (operatorChange === '^') {
+            var result = (num1 ** num2);
+
+            //set state to result
+            setStateChange(result);
+        }
         //calculate multiplication operator
         else {
             var result = (num1 * num2);
@@ -122,8 +130,14 @@ const Calculator = () => {
                 <button onClick={handleOperators} className='button-styling' value='/'>&#247;</button>
                 <button onClick={handleOperators} className='button-styling' value='*'>*</button>
                 <button onClick={handleOperators} className='button-styling' value='sqr'>&#8730;</button>
+                <button onClick={handleOperators} className='button-styling' value='^'>^</button>
                 <button onClick={getResult} className='button-styling' value='=' id="equal-button">=</button>
                 <button onClick={handleClear} className='button-styling' id="clear-button">Clr</button>
+            </div>
+            <div className="return-button">
+                <Link to='/'>
+                    <button id="return-button-styling">Back</button>
+                </Link>
             </div>
         </div>
     )

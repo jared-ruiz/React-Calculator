@@ -124,6 +124,21 @@
   grid-gap: 5px;
 }
 
+.return-button {
+  text-align: left;  
+  margin-bottom: 50%;
+}
+
+#return-button-styling {
+  font-size: 30px;
+  margin-left: 1%;
+  padding: 10px;
+}
+
+#return-button-styling:hover {
+  cursor: pointer;
+  background-color: rgb(228, 104, 104);
+}
 /*////////////////////////// */
 /* Contact Component Styling*/
 /*//////////////////////// */
