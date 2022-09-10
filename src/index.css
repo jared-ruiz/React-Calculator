@@ -1,3 +1,4 @@
+/* google font import */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
 
 /* Simple reset of base css stylings*/
@@ -9,7 +10,10 @@
   font-size: 45px;
 }
 
+/*/////////////////////// */
 /* Home Component Styling */
+/*////////////////////////*/
+
 .home-styling {
   margin-top: 15%;
   margin-left: auto;
@@ -50,7 +54,9 @@
   cursor: pointer;
 }
 
+/*///////////////////////////// */
 /* Calculator Component Styling*/
+/*/////////////////////////// */
 
 .calculator-styling {
   text-align: center;
@@ -65,14 +71,30 @@
   margin-top: 1%;
 }
 
-#test-button {
+.button-styling {
   margin-top: 20%;
   padding: 5px;
 }
 
-#test-button:hover {
+.button-styling:hover {
   cursor: pointer;
+  background-color: rgb(164, 177, 185);
+}
+
+#clear-button {
+  background-color: rgb(228, 104, 104);
+}
+
+#clear-button:hover {
+  background-color: rgb(158, 47, 47);
+}
+
+#equal-button {
   background-color: lightskyblue;
+}
+
+#equal-button:hover {
+  background-color: rgb(38, 105, 146);
 }
 
 .calculator-digits {
