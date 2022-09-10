@@ -16,10 +16,19 @@ const Calculator = () => {
     }
 
     const handleButtonClicks = (e) => {
+        //Prevent multiple decimals from appearing by checking if current state already contains a '.'
+        if (stateChange.includes('.') && e.target.value === '.') {
+            return stateChange;
+        }
 
-        //allows for initial state to remove '0' upon multiple button presses
-        //more convienient than having the button grid bounce around from empty state value
-        setStateChange(parseFloat(stateChange) + e.target.value);
+        //This took a while to brainstorm but if current state SOLELY equals the initial '0', set state to newest digit
+        //afterwards, all following digits will be added to previous state. This removes the trailing '0' issue I had
+        if (stateChange === '0') {
+            setStateChange(e.target.value);
+        }
+        else {
+            setStateChange(stateChange + e.target.value);
+        }   
     }
 
     const handleOperators = (e) => {
@@ -38,9 +47,9 @@ const Calculator = () => {
 
     const getResult = () => {
 
-        //assign state values as variables for later math, parseInt for clean output
-        var num1 = parseInt(firstNumber)
-        var num2 = parseInt(stateChange);
+        //assign state values as variables for later math, parseFloat to handle decimal numbers as well
+        var num1 = parseFloat(firstNumber)
+        var num2 = parseFloat(stateChange);
 
         //check if the user used digits, else return error
         if (!firstNumber || !stateChange) {
@@ -95,13 +104,13 @@ const Calculator = () => {
                 <button onClick={handleButtonClicks} className='button-styling' value='7'>7</button>
                 <button onClick={handleButtonClicks} className='button-styling' value='8'>8</button>
                 <button onClick={handleButtonClicks} className='button-styling' value='9'>9</button>
+                <button onClick={handleButtonClicks} className='button-styling' value='.'>.</button>
                 <button onClick={handleOperators} className='button-styling' value='+'>+</button>
                 <button onClick={handleOperators} className='button-styling' value='-'>-</button>
                 <button onClick={handleOperators} className='button-styling' value='/'>/</button>
                 <button onClick={handleOperators} className='button-styling' value='*'>*</button>
                 <button onClick={getResult} className='button-styling' value='=' id="equal-button">=</button>
                 <button onClick={handleClear} className='button-styling' id="clear-button">Clr</button>
-                
             </div>
         </div>
     )
