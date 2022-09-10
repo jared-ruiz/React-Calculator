@@ -23,7 +23,7 @@ const Calculator = () => {
 
         //This took a while to brainstorm but if current state SOLELY equals the initial '0', set state to newest digit
         //afterwards, all following digits will be added to previous state. This removes the trailing '0' issue I had
-        if (stateChange === '0') {
+        if (stateChange === '0' && e.target.value !== '0') {
             setStateChange(e.target.value);
         }
         else {
@@ -32,7 +32,7 @@ const Calculator = () => {
     }
 
     const handleOperators = (e) => {
-        if (e.target.value === '+' || '-' || '*' || '/') {
+        if (e.target.value === '+' || '-' || '*' || '/' || 'sqr') {
 
             //assign operator state
             setOperatorChange(e.target.value);
@@ -48,8 +48,11 @@ const Calculator = () => {
     const getResult = () => {
 
         //assign state values as variables for later math, parseFloat to handle decimal numbers as well
-        var num1 = parseFloat(firstNumber)
+        var num1 = parseFloat(firstNumber);
         var num2 = parseFloat(stateChange);
+
+        // console.log(num1);
+        // console.log(operatorChange);
 
         //check if the user used digits, else return error
         if (!firstNumber || !stateChange) {
@@ -80,6 +83,14 @@ const Calculator = () => {
             //set state to result
             setStateChange(result);
         }
+        //calculate square root operator
+        else if (operatorChange === 'sqr') {
+            //use Math.sqrt() to take first number and sqrt it
+            var result = Math.sqrt(num1)
+
+            //set state to result
+            setStateChange(result);
+        }
         //calculate multiplication operator
         else {
             var result = (num1 * num2);
@@ -104,11 +115,13 @@ const Calculator = () => {
                 <button onClick={handleButtonClicks} className='button-styling' value='7'>7</button>
                 <button onClick={handleButtonClicks} className='button-styling' value='8'>8</button>
                 <button onClick={handleButtonClicks} className='button-styling' value='9'>9</button>
+                <button onClick={handleButtonClicks} className='button-styling' value='0'>0</button>
                 <button onClick={handleButtonClicks} className='button-styling' value='.'>.</button>
                 <button onClick={handleOperators} className='button-styling' value='+'>+</button>
                 <button onClick={handleOperators} className='button-styling' value='-'>-</button>
-                <button onClick={handleOperators} className='button-styling' value='/'>/</button>
+                <button onClick={handleOperators} className='button-styling' value='/'>&#247;</button>
                 <button onClick={handleOperators} className='button-styling' value='*'>*</button>
+                <button onClick={handleOperators} className='button-styling' value='sqr'>&#8730;</button>
                 <button onClick={getResult} className='button-styling' value='=' id="equal-button">=</button>
                 <button onClick={handleClear} className='button-styling' id="clear-button">Clr</button>
             </div>
